@@ -44,7 +44,7 @@ return media;
 function maisVelho(){
     maisvelho = entrevistados[0].idade;
     for(var j = 0; j < entrevistados.length; j ++){
-        if (entrevistados[j].idade > maisvelho.idade){
+        if (entrevistados[j].idade > maisvelho){
             maisvelho = entrevistados[j].idade;
         }
     }
@@ -54,7 +54,7 @@ function maisVelho(){
 function maisNovo(){
     maisNovo = entrevistados[0].idade;
     for(var j = 0; j < entrevistados.length; j ++){
-        if (entrevistados[j].idade < maisNovo.idade){
+        if (entrevistados[j].idade < maisNovo){
             maisNovo = entrevistados[j].idade;
         }
     }
