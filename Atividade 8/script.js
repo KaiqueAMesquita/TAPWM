@@ -1,4 +1,4 @@
-pessoasAEntrevistar = 2;
+pessoasAEntrevistar = 45;
 entrevistados  = new Array(pessoasAEntrevistar);
 
 function entrevistado(nome, idade, sexo, opniao){
