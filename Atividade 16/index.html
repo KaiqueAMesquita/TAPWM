@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts.js"></script>
+    <title>Janela</title>
+</head>
+<body>
+    <h1 id="status">Fechada</h1>
+    <img width="300px" height="300px" id="janela" src="./assets/closed.png" alt="Janela Fechada" 
+    onmouseover="abrirEFechar(true)" onmouseout="abrirEFechar(false)" onclick="quebrar()" />
+
+<script>
+   function abrirEFechar(abrir) {
+       var img = document.getElementById("janela");
+       if (abrir) {
+           img.src = "./assets/opened.png"; 
+           document.getElementById('status').textContent = 'Aberta';
+
+       } else {
+           img.src = "./assets/closed.png";
+           document.getElementById('status').textContent = 'Fechada';
+       } 
+   }
+
+   function quebrar() {
+        var img = document.getElementById("janela");
+        img.src="./assets/broked.png"
+        document.getElementById('status').textContent = 'Quebrada';
+
+   }
+</script>
+</body>
+</html>
