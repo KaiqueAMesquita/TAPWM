@@ -1,0 +1,21 @@
+<select id="curso" onchange="carregarCurso()">
+  <option value="">Selecione um curso</option>
+  <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+  <option value="Automação Industrial">Automação Industrial</option>
+  <option value="Automação Industrial">Automação Industrial</option>
+</select>
+
+<script>
+  function carregarCurso() {
+    var cursoSelecionado = document.getElementById("curso").value;
+    if (cursoSelecionado != "") {
+      if (confirm("Deseja carregar o curso " + cursoSelecionado + "?")) {
+        var janela = window.open("", "curso", "width=600,height=300");
+        janela.document.write("<h1>" + cursoSelecionado + "</h1>");
+        janela.document.write("<p>Descrição do curso: ...</p>");
+        janela.document.write("<p>Período: ...</p>");
+        janela.document.write("<p>Carga horária: ...</p>");
+      }
+    }
+  }
+</script>
