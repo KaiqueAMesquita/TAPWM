@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer>
+        function adjustCase() {
+            var text = document.getElementById('txt');
+            var upperCheckbox = document.getElementById('upper');
+            var lowerCheckbox = document.getElementById('lower');
+
+            if (upperCheckbox.checked) {
+                text.value = text.value.toUpperCase();
+            } else if (lowerCheckbox.checked) {
+                text.value = text.value.toLowerCase();
+            }
+        }
+
+        window.onload = function() {
+            var textInput = document.getElementById('txt');
+            textInput.addEventListener('input', adjustCase);
+
+            var upperCheckbox = document.getElementById('upper');
+            var lowerCheckbox = document.getElementById('lower');
+
+            upperCheckbox.addEventListener('change', adjustCase);
+            lowerCheckbox.addEventListener('change', adjustCase);
+        };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt">Texto</label><br>
+    <input type="text" name="txt" id="txt"><br><br><br>
+    <input type="radio" id="upper" name="option" value="upper" checked>
+    <label for="upper">Caixa alta</label><br>
+    <input type="radio" id="lower" name="option" value="lower">
+    <label for="lower">Caixa baixa</label><br>
+</body>
+</html>
